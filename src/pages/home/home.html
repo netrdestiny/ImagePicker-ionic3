@@ -1,14 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Camera/Gallery
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+  <button ion-button (click)="takeImage()">
+    Take Image
+  </button>
+
+  <button ion-button (click)="pickImage()">
+    Pick Image
+  </button>
+
+  <ion-card *ngIf="previewImage">
+    <img [src]="previewImage" />
+  </ion-card>
+
 </ion-content>
